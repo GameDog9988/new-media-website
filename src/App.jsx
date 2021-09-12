@@ -1,7 +1,5 @@
 import React, { useState, useEffect } from "react";
 import PaintingImage from "./images/painting-image.jpg";
-import axios from "axios";
-import logo from "./logo.svg";
 import "./App.css";
 
 function App() {
