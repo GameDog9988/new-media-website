@@ -9,6 +9,7 @@ function App() {
   const [disabled, setDisabled] = useState(true);
 
   const getImage = () => {
+    setDisabled(true);
     setImage("");
     fetch("https://api.unsplash.com/photos/random", {
       headers: {
@@ -24,14 +25,13 @@ function App() {
         console.error(err);
         setImage(PaintingImage);
       });
-  };
-
-  useEffect(() => {
-    setDisabled(true);
-    getImage();
     setTimeout(() => {
       setDisabled(false);
     }, 5000);
+  };
+
+  useEffect(() => {
+    getImage();
   }, []);
 
   return (
