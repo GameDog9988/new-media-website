@@ -38,7 +38,11 @@ function App() {
       <header className="App-header">
         <h1 className="title">Ephemeral Media</h1>
         <p className="subtitle">Images provided by Unsplash API</p>
-        {image && <img src={image} className="disappearing-image" />}
+        {image ? (
+          <img src={image} className="disappearing-image" />
+        ) : (
+          <p>Do you remember the image?</p>
+        )}
         <div className="App-container">
           <p>
             <button disabled={disabled} type="button" onClick={getImage}>
