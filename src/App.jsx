@@ -25,6 +25,7 @@ function App() {
       });
     setTimeout(() => {
       setDisabled(false);
+      setImage("");
     }, 5000);
   };
 
